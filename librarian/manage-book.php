@@ -69,7 +69,7 @@
                                             <h4 class="modal-title" id="modal-info-label"><i class="fa fa-info"></i>Info Modal</h4>
                                         </div>
                                         <div class="modal-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, magni suscipit. Dicta dolorem earum esse, fugiat harum minus neque nesciunt, quas reiciendis rem repudiandae rerum? Adipisci et labore laborum quidem!
+                                            Lorem ipsum dolor sit amet,
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>

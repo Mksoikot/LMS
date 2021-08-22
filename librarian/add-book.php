@@ -1,4 +1,4 @@
-<?php require_once 'header.php'; 
+<?php require_once 'header.php';  
 if (isset($_POST['save_book'])) {
    $book_name = $_POST['book_name'];
    $book_author_name = $_POST['book_author_name'];

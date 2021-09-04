@@ -138,7 +138,7 @@ session_start();
                             <img alt="profile photo" src="../assets/images/avatar/avatar_user.jpg" />
                         </div>
                         <div class="user-info">
-                            <span class="user-name">Jane Doe</span>
+                            <span class="user-name">Soikot</span>
                             <span class="user-profile">Admin</span>
                         </div>
                         <i class="fa fa-plus icon-open" aria-hidden="true"></i>
@@ -189,6 +189,8 @@ session_start();
                                         
                                     </ul>
                                 </li>
+                                <li class="<?= $page =='issue-book.php' ? 'active-item':'' ?>"><a href="issue-book.php"><i class="fa fa-book" aria-hidden="true"></i><span>Issue Book</span></a></li>
+                                 <li class="<?= $page =='return-book.php' ? 'active-item':'' ?>"><a href="return-book.php"><i class="fa fa-book" aria-hidden="true"></i><span>Return Book</span></a></li>
                                
                             </ul>
                         </nav>

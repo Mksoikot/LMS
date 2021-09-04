@@ -8,7 +8,7 @@
 <body>
 	<div class="container">
 	<div class="row">
-	<div class="col-sm-4 col-sm-offset-4">
+	<div style="margin-top: 225px;" class="col-sm-4 col-sm-offset-4">
 	<a class="btn btn-primary btn-block" href="student/">Student</a>
 	<a class="btn btn-primary btn-block" href="librarian/">Librarian</a>
     </div>

@@ -204,18 +204,23 @@ if (isset($_POST['update-book'])) {
    $available_qty = $_POST['available_qty'];
    $libraian_username = $_SESSION['libraian_username'];
 
-   // $image = explode('.',$_FILES['book_image']['name']);
-   // $image_ext = end($image);
-   
-   // $image = date('Ymdhis.') . $image_ext;
 
+   $result = mysqli_query($con, "UPDATE `books` SET `book_name`='$book_name',`book_author_name`='$book_author_name',`book_publication_name`='$book_publication_name',`book_purchase_date`='$book_purchase_date',`book_price`='$book_price',`book_qty`='$book_qty',`available_qty`='$available_qty',`libraian_username`='$libraian_username' WHERE `id`='$id'");
+    if ($result) {
+       ?>
+       <script type="text/javascript">
+           alert('Book Update Successfully!');
+           javascript:history.go(-1);
+       </script>
+      <?php
+       }else{
+        ?>
+       <script type="text/javascript">
+           alert('Book Not Update!');
+       </script>
+        <?php
+       }
 
-   
-   $result = mysqli_query($con, $query = "UPDATE `books` SET`book_name`='$book_name',`book_author_name`='$book_author_name',`book_publication_name`='$book_publication_name',`book_purchase_date`='$book_purchase_date',`book_price`='$book_price',`book_qty`='$book_qty',`available_qty`='$available_qty',`libraian_username`='$libraian_username', WHERE id='$id'");
-
-   if ($result){
-
-   }
    }
       ?>
     <?php require_once 'footer.php'; ?>

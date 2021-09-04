@@ -45,23 +45,23 @@ if(count( $input_errors) == 0){
 
       $email_check = mysqli_query($con,$query = "SELECT * FROM `students` WHERE `email`='$email'");
       $email_check_row = mysqli_num_rows($email_check);
-      echo  $email_check_row;
+      // echo  $email_check_row;
       if($email_check_row == 0){
         $username_check = mysqli_query($con,$query = "SELECT * FROM `students` WHERE `username`='$username'");
         $username_check_row = mysqli_num_rows($username_check);
         if($username_check_row == 0){
-            if(strlen($username) > 5){
-                if(strlen($password) > 5){
+            if(strlen($username) > 4){
+                if(strlen($password) > 4){
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $result = mysqli_query($con , $query ="INSERT INTO `students`( `firstname`, `lastname`, `roll`, `reg`, `email`, `username`, `password`, `status`, `phone`) VALUES ('$firstname','$lastname','$roll','$reg','$email','$username','$hashed_password','0','$phone')");
+    $result = mysqli_query($con , $query ="INSERT INTO `students`( `firstname`, `lastname`, `roll`, `reg`, `email`, `username`, `password`, `status`, `phone`) VALUES ('$firstname','$lastname','$roll','$reg','$email','$username','$hashed_password','1','$phone')");
     if($result){
         $success =  "Your Registation successfully!";
     }else{
         $error = "Something Wrong!";
     }
                 }else{
-                    $password_exists ='Password More Then5 Characters';  
+                    $password_exists ='Password More Then 5 Characters';  
                 }
 
             }else{
@@ -264,7 +264,7 @@ if(count( $input_errors) == 0){
                             <div class="form-group mt-md">
                                 <span class="input-with-icon">
                                     <input type="text" class="form-control" placeholder="01*********" name="phone"
-                                        value="<?= isset($phone) ? $phone:'' ?>" <i class="fa fa-user"></i>
+                                        value="<?= isset($phone) ? $phone:'' ?>"<i class="fa fa-user"></i>
                                 </span>
                                 <?php
                                 if(isset($input_errors ['phone'])){
